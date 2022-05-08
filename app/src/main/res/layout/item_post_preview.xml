@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/monContenair">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userImage"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/Round" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/userImage"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="User full name" />
+
+
+
+        <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userName"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/userImage"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Post timestamp" />
+
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+            android:layout_below="@+id/userImage"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/postText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timestamp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/postImage"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Post text" />
+
+        <LinearLayout
+            android:id="@+id/lineTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postText"
+            android:layout_toEndOf="@+id/postImage"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:text="tag 1"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/jaune"
+                android:background="@color/jaune"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:text="tag 2"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/jaune"
+                android:background="@color/jaune"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineTag"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/postImage"
+            android:background="@color/jaune"
+            android:backgroundTint="@color/jaune"
+            android:paddingLeft="15dp"
+            android:paddingTop="2dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="tag 3" />
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/posts_nav_graph"
+    app:startDestination="@id/newPostsFragment">
+
+    <fragment
+        android:id="@+id/newPostsFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.NewPostsFragment"
+        android:label="NewPostsFragment" >
+        <action
+            android:id="@+id/action_newPostsFragment_to_postFragment"
+            app:destination="@id/postFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_newPostsFragment_to_deletePostFragment"
+            app:destination="@id/deletePostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.PostFragment"
+        android:label="PostFragment" >
+        <argument
+            android:name="post"
+            app:argType="com.androiddevs.mvvmnewsapp.models.Data" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedPostsFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.SavedPostsFragment"
+        android:label="SavedPostsFragment" >
+        <action
+            android:id="@+id/action_savedPostsFragment_to_postFragment"
+            app:destination="@id/postFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_savedPostsFragment_to_deletePostFragment"
+            app:destination="@id/deletePostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchPostsFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.SearchPostsFragment"
+        android:label="SearchPostsFragment" >
+        <action
+            android:id="@+id/action_searchPostsFragment_to_postFragment"
+            app:destination="@id/postFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_searchPostsFragment_to_deletePostFragment"
+            app:destination="@id/deletePostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPostFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.CreatePostFragment"
+        android:label="CreatePostFragment" >
+        <action
+            android:id="@+id/action_createPostFragment_to_newPostsFragment"
+            app:destination="@id/newPostsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deletePostFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.DeletePostFragment"
+        android:label="DeletePostFragment" >
+        <action
+            android:id="@+id/action_deletePostFragment_to_newPostsFragment"
+            app:destination="@id/newPostsFragment" />
+    </fragment>
+    <argument
+        android:name="post"
+        app:argType="com.androiddevs.mvvmnewsapp.models.Data" />
+</navigation>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/create_post_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/title_create_post_page"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:paddingTop="7dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textFontWeight="900"
+            android:textSize="20sp"
+            tools:text="ADD POST" />
+
+
+        <EditText
+            android:id="@+id/create_post_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:hint="url of the image"
+            android:layout_below="@+id/title_create_post_page"
+            android:textAlignment="center"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+
+        <EditText
+            android:id="@+id/create_post_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_below="@+id/create_post_image"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:hint="description"
+            android:textAlignment="center"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:id="@+id/line_tag_like1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/create_post_text"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp">
+
+
+            <EditText
+                android:id="@+id/create_post_tag_1"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_marginEnd="15dp"
+                android:hint="tag1"
+                android:paddingLeft="15dp"
+                android:paddingTop="2dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:id="@+id/create_post_tag_2"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="tag2"
+                android:paddingLeft="15dp"
+                android:paddingTop="2dp"
+                android:paddingRight="15dp"
+                android:textAlignment="center"
+                android:backgroundTint="@color/black"
+                android:paddingBottom="2dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"  />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_tag_like2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_tag_like1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp">
+
+
+            <EditText
+                android:id="@+id/create_post_tag_3"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="15dp"
+                android:hint="tag3"
+                android:paddingLeft="15dp"
+                android:textAlignment="center"
+                android:backgroundTint="@color/black"
+                android:paddingTop="2dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+            <!--
+            <EditText
+                android:id="@+id/NumberOfLike"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="50dp"
+                android:backgroundTint="@color/black"
+                android:ems="10"
+                android:hint="Number of like"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            -->
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_create_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_tag_like2"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:background="@color/jaune"
+            android:text="poster"
+            android:textColor="#795548"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
